@@ -19,7 +19,7 @@ import java.util.Set;
 @Data
 @ToString (exclude = "publishers")
 @EqualsAndHashCode (exclude = "publishers")
-public class Book{
+public class Book implements Serializable{
     @Id
     @GeneratedValue
     private int id;

@@ -3,11 +3,12 @@ package com.example.springweb.model.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table
 @Data
-public class User {
+public class User implements Serializable {
     @Id
     @GeneratedValue
     private int id;
