@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -15,6 +16,8 @@ import java.util.Set;
 @Entity
 @Table(name = "publisher")
 @Data
+@ToString(exclude = "books")
+@EqualsAndHashCode (exclude = "books")
 public class Publisher{
     @Id
     @GeneratedValue

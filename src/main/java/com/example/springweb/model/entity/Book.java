@@ -17,6 +17,8 @@ import java.util.Set;
 @Entity
 @Table(name = "book")
 @Data
+@ToString (exclude = "publishers")
+@EqualsAndHashCode (exclude = "publishers")
 public class Book{
     @Id
     @GeneratedValue
